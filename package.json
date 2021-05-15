@@ -1,0 +1,17 @@
+{
+  "name": "image-resize-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "predeploy": "rm -rf node_modules && npm install --platform=linux --arch=x64 --target=14.0.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.28.2"
+  }
+}
